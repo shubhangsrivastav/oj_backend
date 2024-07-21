@@ -331,7 +331,9 @@ app.get("/currentoa/:oaid",async(req,res)=>{
         console.error(error);
     }
 })
-
+app.get("/health", async (req, res) => {
+    res.send({ message: "health OK!" });
+  });
 app.listen(3000,()=>{
     console.log(" Server is listening on port 3000");
 })
